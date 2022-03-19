@@ -24,8 +24,6 @@
 </details>
 
 <hr>
- <br />
- <br />
 
 ## About The Project
 
