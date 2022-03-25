@@ -1,11 +1,11 @@
 <?php
 	if(isset($_GET['url'])){
-		if(file_exists($_GET['url'].'.html')){
-			include($_GET['url'].'.html');
+		if(file_exists($_GET['url'].'.php')){
+			include($_GET['url'].'.php');
 		}else{
-			include('404.html');
+			include('404.php');
 		}
 	}else{
-		include('home.html');
+		include('home.php');
 	}
 ?>
