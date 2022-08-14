@@ -201,6 +201,7 @@ nav.menuMobile li a {
 }
 
 .presentationDescription p {
+  width: 80%;
   font-size: 1.25rem;
 }
 
@@ -241,6 +242,41 @@ nav.menuMobile li a {
 .presentationImage img.typescript {
   bottom: 1%;
   right: -13%;
+}
+
+.buttonsCTA {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.buttonCTA {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--blue);
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.buttonCTA.two {
+  background: transparent;
+  border: 4px solid var(--blue);
+  color: var(--blue);
+}
+
+.buttonCTA:hover {
+  text-decoration: none;
+}
+
+.buttonCTA i {
+  font-size: 1.5rem;
 }
 
 /* Numbers ============================== */
@@ -527,8 +563,29 @@ nav.menuMobile li a {
   width: 150px;
 }
 
-.contact .socials {
-  width: 50%;
+.contact .buttonContact {
+  width: 70%;
+}
+
+.buttonContact a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: #25D366;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.buttonContact a:hover {
+  text-decoration: none;
+}
+
+.buttonContact a i {
+  font-size: 2rem;
 }
 
 /* Footer ============================== */
@@ -592,14 +649,28 @@ footer p {
   .presentationImage img.typescript {
     right: -9%;
   }
+
+  .presentation .container {
+    width: 100%;
+    justify-content: center;
+    gap: 0;
+    flex-direction: column-reverse;
+  }
+
+  .presentationDescription {
+    width: 80%;
+  }
+
+  .presentationImage {
+    width: 80%;
+  }
+  
+  .buttonCTA {
+    width: 50%;
+  }
 }
 
 @media (max-width: 900px) {
-  .presentationDescription,
-  .presentationImage {
-    width: 50%;
-  }
-
   .contact .socials {
     width: auto;
     justify-content: space-around;
@@ -608,9 +679,12 @@ footer p {
 
 @media (max-width: 850px) {
   .boxSkills,
-  .boxProjects,
   .boxDepositions {
     width: 60%;
+  }
+
+  .boxProjects {
+    width: 100%;
   }
 
   .aboutMe {
@@ -652,20 +726,6 @@ footer p {
 @media (max-width: 750px) {
   nav.menuMobile ul {
     top: 110px;
-  }
-
-  .presentation .container {
-    justify-content: center;
-    gap: 0;
-    flex-direction: column-reverse;
-  }
-
-  .presentationDescription {
-    width: 100%;
-  }
-
-  .presentationImage {
-    width: 70%;
   }
 }
 
@@ -714,8 +774,29 @@ footer p {
     width: 80%;
   }
 
-  .socials {
-    width: 60%;
+  .contact .buttonContact {
+    width: 100%;
+  }
+  
+  .buttonContact a {
+    width: 100%;
+  }
+
+  .buttonsCTA {
+    flex-direction: column;
+  }
+  
+  .buttonCTA {
+    width: 100%;
+  }
+
+  .presentationImage {
+    display: none;
+  }
+
+  .presentationDescription {
+    width: 100%;
+    padding: 2rem;
   }
 }
 
