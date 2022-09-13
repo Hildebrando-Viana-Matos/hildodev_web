@@ -1,0 +1,417 @@
+:root {
+  --white: #ffffff;
+  --black: #2d3436;
+  --gray: #636e72;
+  --blue: #6c5ce7;
+  --green: #00b894;
+  --background: #f1f1f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 81.25%;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 400 1rem "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: filter 200ms;
+}
+
+a:hover {
+  text-decoration: underline;
+  filter: brightness(0.9);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: filter 400ms;
+}
+button:hover {
+  filter: brightness(0.9);
+}
+
+.container {
+  width: min(90vw, 1120px);
+  margin: 2rem auto;
+}
+
+/* Header ============================== */
+
+header .container {
+  width: min(90vw, 1400px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header img.logo{
+  width: 110px;
+  height: auto;
+}
+
+header .textHeader,
+header .textHeaderPlus {
+  margin: 2rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header .textHeader h1 {
+  width: 100%;
+  max-width: 600px;
+
+  margin-bottom: 0.5rem;
+
+  font-size: 2.375rem;
+  line-height: 2.875rem;
+  text-align: center;
+  color: var(--blue);
+}
+
+header .textHeader p {
+  width: 100%;
+  max-width: 400px;
+
+  margin-bottom: 0.5rem;
+
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  text-align: center;
+  color: var(--gray);
+}
+
+header .textHeaderPlus h1 {
+  margin-bottom: 0.5rem;
+
+  font-size: 4.375rem;
+  line-height: 4.875rem;
+  text-align: center;
+  color: var(--blue);
+}
+
+header .textHeaderPlus p {
+  width: 100%;
+  max-width: 600px;
+
+  margin-bottom: 0.5rem;
+
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  text-align: center;
+  color: var(--gray);
+}
+
+header .contentHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .backButton {
+  display: block;
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--blue);
+  border-radius: 1rem;
+
+  color: var(--blue);
+  font-size: 1.25rem;
+}
+
+header .backButton:hover {
+  text-decoration: none;
+}
+
+header .buttonIconHeader {
+  display: block;
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 1rem;
+
+  background-color: var(--blue);
+}
+
+/* Cards ============================== */
+
+.cards {
+  margin-bottom: 4rem;
+}
+
+.cards .container {
+  width: min(90vw, 1400px);
+
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.boxCard {
+  width: 32%;
+  background-color: var(--white);
+  padding: 2rem;
+  text-align: center;
+
+  border-radius: 0.5rem;
+  border: 3px solid var(--white);
+
+  box-shadow: 0px 7px 40px -10px rgba(150, 170, 180, 0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.boxCard:hover {
+  text-decoration: none;
+  cursor: pointer;
+  border: 3px solid var(--blue);
+}
+
+.boxCard img {
+  width: 113px;
+
+  margin-bottom: 0.5rem;
+}
+
+.boxCard h2 {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-align: center;
+  color: var(--blue);
+}
+
+.boxCard p {
+  width: 85%;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  text-align: center;
+  color: var(--gray);
+}
+
+@media (max-width: 840px) {
+  .cards .container {
+    align-items: stretch;
+    justify-content: center;
+  }
+  
+  .boxCard {
+    width: 48%;
+  }
+}
+
+@media (max-width: 580px) {
+  .cards .container {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .boxCard {
+    width: 100%;
+  }
+}
+
+/* Cards Products ============================== */
+.cardsProducts {
+  margin-bottom: 4rem;
+}
+
+.cardsProducts .container {
+  width: min(90vw, 1400px);
+}
+
+.cardsProducts .content {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.headerCardsProducts h2 {
+  font-weight: 800;
+  font-size: 2.375rem;
+  line-height: 2.875rem;
+  color: var(--blue);
+
+  margin-bottom: 2rem;
+}
+
+.cardProduct {
+  width: 32%;
+  background-color: var(--white);
+  padding: 2rem;
+
+  border-radius: 0.5rem;
+  border: 3px solid var(--white);
+
+  box-shadow: 0px 7px 40px -10px rgba(150, 170, 180, 0.25);
+}
+
+.cardProduct img.imageProduct {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+}
+
+.cardProduct h3 {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-align: center;
+  color: var(--blue);
+}
+
+.cardProduct p {
+  width: 85%;
+  margin: 0 auto;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  text-align: center;
+  color: var(--gray);
+}
+
+.utils {
+  margin: 1rem 0;
+}
+
+.utils h4 {
+  margin-bottom: 0.25rem;
+
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  color: var(--black);
+}
+
+.utils .contentUtils {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.cardUtils {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--blue);
+
+  border-radius: 0.5rem;
+}
+
+.buttonsBuy a {
+  width: 100%;
+  display: block;
+
+  padding: 1rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  border-radius: 0.25rem;
+  
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  color: var(--white);
+}
+
+.buttonsBuy a:hover {
+  text-decoration: none;
+  filter: brightness(0.8);
+}
+
+.buttonsBuy .buyAmazon {
+  background: #222222;
+}
+
+.buttonsBuy .buyAmericanas {
+  background: #F90032;
+
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1150px) {
+  .cardsProducts .content {
+    justify-content: center;
+  }
+
+  .cardProduct {
+    width: 48%;
+  }
+}
+
+@media (max-width: 750px) {
+  .cardProduct {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  header .textHeaderPlus h1 {
+    font-size: 2.375rem;
+    line-height: 2.875rem;
+  }
+}
